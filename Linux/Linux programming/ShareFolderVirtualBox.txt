@@ -1,0 +1,5 @@
+Tren VirtualBox chon Share Folder > chon Path den folder muon share tren host
+Tren may ao linux:
+	apt-get install linux-headers-$(uname -r)
+	sudo /media/cdrom/VBoxLinuxAdditions.run
+	mount -t vboxsf <share folder name> <path to mount folder>

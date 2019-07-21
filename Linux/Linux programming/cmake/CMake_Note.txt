@@ -1,0 +1,13 @@
++ cmake_minimum_required(VERSION 2.6) : header
++ PROJECT(GTEST) : set name
++ add_subdirectory(source/src) : add subdirectory which contain sub CMakeLists.txt
+  khi add sub_dir outside current source_dir can phai chi dinh binary_dir cho no
+  vi du : add_subdirectory(../../../../../util ${CMAKE_CURRENT_BINARY_DIR}/util)
++ include_directories(source/include) : add include directory
++ LINK_LIBRARIES(${CMAKE_CURRENT_SOURCE_DIR}/libgtest.a) : add file library to link
++ link_directories(${UTIL_LIBRARY_DIRS}) : add directory to find library in this
++ add_executable(test gtest) : build executable file
++ target_link_libraries(test pthread ciftable) : linking
++ add_custom_command: 
+
+

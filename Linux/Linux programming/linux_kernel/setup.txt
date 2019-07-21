@@ -1,0 +1,3 @@
+sudo apt-get install git build-essential kernel-package fakeroot libncurses5-dev kernel-wedge
+libqt4-devg++ [libqt3-mt-dev]
+libncurses-dev

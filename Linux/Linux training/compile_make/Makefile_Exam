@@ -1,0 +1,57 @@
+#Define compiler
+export CC = gcc
+export CXX = g++
+#define flag
+export CFLAGS = –Wall -c
+#C_CXX_FLAGS += -O2
+CVP_FLG = -cvq
+#Variable
+AR = ar
+export APPNAME = test 
+APP_BUILD_CONFIG = Release
+SRC = /test/src
+INCLUDE = /test/inc
+OBJS = test.o
+#TC_BUILD_CONFIG := Debug
+
+#-------Release config
+ifeq "$(TC_BUILD_CONFIG)" "Release"
+	CFLAGS += -O2
+else
+#------ Debug configuration ------
+	CFLAGS += -g
+	CFLAGS += -D__DEBUG_MODE__
+endif
+
+#Check architecture
+export CPU_ARCH ?= unknown
+ARCH = $(shell uname -p)
+ifeq "$(ARCH)" "unknown"
+	ARCH = $(shell uname -m)
+endif
+
+ifneq (,$(filter i386 i486 i586 i686 x86,$(ARCH)))
+	CPU_ARCH = x86
+else ifneq (,$(filter x86_64 x86-64 amd64 x64,$(ARCH)))
+	CPU_ARCH = x64
+endif
+
+ifeq "$(CPU_ARCH)" "x86"
+	CFLAGS += -D APP_ARCH_X86
+else ifeq "$(CPU_ARCH)" "x64"
+	CFLAGS += -D APP_ARCH_X64
+endif
+
+test: test.o
+	$(CC) -o test $(OBJS) -L$(SRC) -ltest
+test.o: test.c
+	$(CC) $(CFLAGS) test.c -I$(INCLUDE)
+.PHONY: clean Submake Blib
+clean: 
+	rm -f *.o test
+Submake:
+	cd "test" && $(MAKE)
+Blib:
+	$(CC) $(CFLAGS) $(SRC)/*.c
+	$(AR) $(CVP_FLG) $(SRC)/libtest.a $(SRC)/*.o
+	

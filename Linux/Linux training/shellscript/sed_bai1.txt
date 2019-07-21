@@ -1,0 +1,11 @@
+﻿Dòng chứa <article> và </article> sẽ bị delete
+Thay thế <title> bằng Title: và </title> thành ""
+Thay thế tất cả <para> và </para> thành "". Nếu kết quả dòng thành trắng thì xóa cả dòng
+Thay thế tất cả <emphasis> và </emphasis> thành "*" ví dụ: <emphasis>great</emphasis> -> *great*
+Thay thế từ "web" thành "Web"
+Thay thế dòng bắt đầu bằng <listing> thành ---
+Thay thế dòng bắt đầu bằng </listing> thành ---
+Thay thế tất cả chuỗi &lt; thành <
+Thay thế tất cả chuỗi &gt; thành >
+Thay thế tất cả chuỗi &amp; thành &
+

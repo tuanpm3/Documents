@@ -1,0 +1,45 @@
+<article>
+<title>About the Web</title>
+
+<para>
+This is an article about the World Wide Web.
+The World Wide Web is a collection of documents that are linked to
+one another. The Web is <emphasis>not</emphasis> the same as the
+Internet. The Internet is a world-wide network of networks, and it
+does far more than simply serve up Web pages.
+</para>
+
+<para>Tim Berners-Lee, the inventor of the World Wide Web, put special
+emphasis on the portability of web pages. Rather than create a
+proprietary format, he made Web pages dependent only upon plain ASCII
+text.</para>
+
+<para>
+Web pages are written in a markup language called HTML. Here is what it
+looks like. The &lt; and &gt; mark off elements.
+</para>
+
+<listing>
+&lt;body&gt;
+&lt;div id="top-navig"&gt;
+&lt;a id="top"&gt;&lt;/a&gt;
+&lt;a href="index.html"&gt;CIT 040 Index&lt;/a&gt;
+&amp;gt;
+Assignment 1
+&lt;/div&gt;
+
+&lt;h1&gt;Assignment 1&lt;/h1&gt;
+&lt;p&gt;This exercise shows you how to use the two computer environments that
+you will use in this class. You will:&lt;/p&gt;
+&lt;ol class="upper-roman"&gt;
+&lt;li&gt;Set up your directories on Windows. This is
+where you will write your HTML documents.&lt;/li&gt;
+&lt;/ol&gt;
+</listing>
+
+<para>It looks difficult, but it is possible to learn HTML in a few
+weeks. <emphasis>You, too can create web pages for viewing by
+friends and family!</emphasis>
+Note that, in our listing, we had to encode &gt; as &amp;gt.
+</para>
+</article>

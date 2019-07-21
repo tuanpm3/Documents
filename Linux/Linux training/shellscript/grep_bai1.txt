@@ -1,0 +1,16 @@
+﻿Hiển thị tất cả dòng ma chứa số điện thoại cùng với phần mở rộng ( không hiển thị dòng có số điện thoại mà không có phần mở rộng)
+Hiển thị tất cả dòng bắt đầu bằng 3 số sau đó là dấu cách (khoảng trắng)
+Hiển thị tất cả dòng chứa ngày tháng năm
+Hiển thị tất cả dòng không bắt đầu với chữ S hoa
+Hiển thị tất cả dòng chứa "CA" không quan tâm chữ hoa hay chữ thường
+Hiển thị tất cả dòng chứa email address (chứa chữ @) and với vị tri dòng
+Hiển thị tất cả dòng không có chữ "Sep"
+Hiển thị tất cả dòng co chinh xac chữ "de" (không phải chữ như abcde hoặc de12)
+Hiển thị tất cả dòng chứa chữ Sep và 1 dòng trên va dưới dòng chứa chữ Sep
+Hiển thị tất cả dòng chứa chữ Sep và 1 dòng trên dòng chứa chữ Sep
+Hiển thị tất cả dòng chứa chữ Sep và 1 dòng dưới dòng chứa chữ Sep
+
+
+
+
+

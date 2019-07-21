@@ -1,0 +1,5 @@
+	apt-get source linux-source-3.2.0
+
+or
+
+	git clone git://kernel.ubuntu.com/ubuntu/ubuntu-precise.git

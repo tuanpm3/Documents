@@ -1,0 +1,7 @@
+﻿Hiển thị thêm 1 dòng mở đầu "header Name Designation Department Salary"  và kết thúc "Report Generated" 
+Hiển thị tất cả các dòng mà giá trị cột 1 > 300
+Hiển thị cột 2,3,4 với cột 4 là Technology
+Hiển thị từ cột 2 đến cột cuối (NF) của tất cả các dòng
+Hiển thị tổng giá trị cột 1 của tất cả các dòng
+Hiển thị tất cả các cột với dấu phân cách giữa các cột là dấu |
+Hiển thị tổng cột 5 của dòng mà cột 4 là Technology

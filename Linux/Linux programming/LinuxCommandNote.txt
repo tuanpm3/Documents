@@ -1,0 +1,98 @@
+
+=================================proxy============================================
+1.	vi /etc/profile
+export http_proxy=http://username:password@proxyhost:port/
+export ftp_proxy=http://username:password@proxyhost:port/
+source /etc/profile
+2.	vi /etc/environment
+export http_proxy=http://username:password@proxyhost:port/
+export ftp_proxy=http://username:password@proxyhost:port/
+source /etc/profile
+3.	create /etc/apt/apt.conf
+Acquire::http::proxy "http://myusername:mypassword@10.2.5.200:8080/";
+Acquire::ftp::proxy "ftp://myusername:mypassword@10.2.5.200:8080/";
+Acquire::https::proxy "https://myusername:mypassword@10.2.5.200:8080/";
+reboot
+
+=================================samba on Centos============================================
+Åúadd user
+smbpasswd -a <username>
+
+Åúconfig:
+vi /etc/samba/smb.conf
+
+[olca]
+        comment = olca
+        path = /home/olca
+        read only = No
+        guest ok = Yes
+        browseable = yes
+        create mask = 0777
+
+
+[share]
+        comment = shared
+        path = /home/sesa/shared
+        read only = No
+        guest ok = Yes
+        browseable = yes
+        create mask = 0777
+
+
+	#chown nobody.nogroup /home/olca
+	or
+	# chcon -R -t samba_share_t /home/share/
+
+	#service smb restart (sudo restart smbd)
+
+Åúdisable firewall if needed
+Ubuntu
+	#sudo ufw disable
+CentOS
+	#service iptables stop
+	#chkconfig iptables off
+
+ÅúFind file location
+# find / -name ssl.h
+
+
+# netstat -tulpn
+
+kill -9 pid
+
+Åú Config Keyboard
+sudo dpkg-reconfigure keyboard-configuration
+
+Åú /etc/init.d/networking restart
+
+ÅúMount shared folder from /media
+sudo mount -t vboxsf -o uid=1000,gid=1000 $sharename <folder_name>
+
+Åú apt-get update error
+
+Edit /etc/resolv.conf. In a Terminal window run
+
+sudo gedit /etc/resolv.conf
+
+and add the line
+
+nameserver 8.8.8.8
+
+
+Åú change passwd for user
+sudo passwd user
+
+Åú add user to sudo
+
+sudo adduser <username> sudo
+
+Åú install repo
+sudo apt get install phablet-tools -y
+
+Åúreduce size of file *.vdi
+On Linux Guest
+	dd if=/dev/zero of=/tmp/bigemptyfile bs=4096k
+	rm /tmp/bigemptyfile
+
+On Windows host
+	VBoxManage.exe modifymedium --compact c:\path_to_file.vdi

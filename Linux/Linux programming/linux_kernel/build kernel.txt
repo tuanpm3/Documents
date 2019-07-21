@@ -1,0 +1,21 @@
+###########################################
+# Build for the current host architecture #
+###########################################
+
+1. 	#cp /boot/file_config /root_src_directory
+	#make oldconfig : create or update file ".config" before make target of the kernel source
+2. 	#make clean
+3.  #make -j3 deb-pkg :	make and create kernel image
+	#dbkg -i linux-kernel-image.deb : install new kernel
+or
+	#make -j4
+	#make install
+	
+##############################################
+# Build for the other architecture (embeded) #
+##############################################
+
+Same as above but have to config ARCH and CROSS_COMPILE variables in the toplevel MakeFile
+Ex : 
+	#make ARCH=arm CROSS_COMPILE=arm-linux- ...
+	
