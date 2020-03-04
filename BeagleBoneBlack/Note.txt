@@ -1,0 +1,21 @@
+ÅüInstall driver for PC
+1. Connect via USB
+	--> Board will appear as USB drive
+2. Open the [BeagleBone Getting Started] drive
+	Install E:\Drivers\Windows\BONE_D64.exe (for 64 bit) or BONE_DRV.exe for 32 bit
+
+3. Goto web server running on board: http://192.168.7.2/bone101/Support/bone101/
+
+
+ÅüInstall OS Linux for Board
+1. Download lastest image for board:
+	http://elinux.org/BeagleBoardUbuntu#Method_1:_Download_a_Complete_Pre-Configured_Image
+or	http://beagleboard.org/latest-images
+
+https://www.youtube.com/watch?v=1V3lkhVfkwU
+https://www.youtube.com/watch?v=oRGrm8RfGCE
+https://www.youtube.com/watch?v=c81tmb7WJxw
+
+
+ÅüDeploy Qt Application
+	https://www.youtube.com/watch?v=eLr35wUrz6Q
